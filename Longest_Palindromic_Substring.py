@@ -16,7 +16,6 @@ class Solution(object):
         result = ""
 
         for idx in range(len(s)):
-            print("STARTED", idx)
             result = max(palind(s, idx, idx), palind(s, idx, idx + 1), result, key=len)
 
         return result
