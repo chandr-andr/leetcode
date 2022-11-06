@@ -35,11 +35,11 @@ class Solution(object):
 
 
 s = Solution()
-# print(s.convert("PAYPALISHIRING", 3))  # PINASGYHPI
-# print(s.convert("PAYPALISHIRING", 4))  # PINALSIGYAHRPI
-# print(s.convert("A", 1))  # A
-# print(s.convert("AB", 1))  # A
-print(s.convert("ABC", 1))  # A
+print(s.convert("PAYPALISHIRING", 3))  # PINASGYHPI
+print(s.convert("PAYPALISHIRING", 4))  # PINALSIGYAHRPI
+print(s.convert("A", 1))  # A
+print(s.convert("AB", 1))  # AB
+print(s.convert("ABC", 1))  # ABC
 
 
 # Input: s = "PAYPALISHIRING", numRows = 4
