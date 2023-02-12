@@ -31,12 +31,12 @@ class Solution(object):
 
         if zeros:
             for p_num in positive:
-                if -1*p_num in negative_set:
-                    result.add((p_num, 0, -1*p_num))
+                if -p_num in negative_set:
+                    result.add((p_num, 0, -p_num))
 
         for neg_num_idx1 in range(len(negative)):
             for neg_num_idx2 in range(neg_num_idx1 + 1, len(negative)):
-                num_in_pos = -1 * (
+                num_in_pos = -(
                     negative[neg_num_idx1] + negative[neg_num_idx2]
                 )
                 if num_in_pos in positive_set:
@@ -54,7 +54,7 @@ class Solution(object):
 
         for pos_num_idx1 in range(len(positive)):
             for pos_num_idx2 in range(pos_num_idx1 + 1, len(positive)):
-                num_in_neg = -1 * (
+                num_in_neg = -(
                     positive[pos_num_idx1] + positive[pos_num_idx2]
                 )
                 if num_in_neg in negative_set:
