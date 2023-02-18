@@ -10,29 +10,29 @@ class Solution(object):
         result = []
 
         while f_queue:
-            item_from_stack = f_queue.pop()
+            item_from_f_queue = f_queue.pop()
 
-            parentheses = item_from_stack[0]
-            right = item_from_stack[1]
-            left = item_from_stack[2]
+            parentheses = item_from_f_queue[0]
+            left = item_from_f_queue[1]
+            right = item_from_f_queue[2]
 
             if right == left == 0:
                 result.append(parentheses)
             else:
-                if right != 0:
+                if left != 0:
                     f_queue.append(
                         [
                             parentheses + "(",
-                            right-1,
-                            left,
+                            left-1,
+                            right,
                         ],
                     )
-                if left > right:
+                if right > left:
                     f_queue.append(
                         [
                             parentheses + ")",
-                            right,
-                            left - 1,
+                            left,
+                            right - 1,
                         ],
                     )
         return result
