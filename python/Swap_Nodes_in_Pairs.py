@@ -52,10 +52,10 @@ list3.next.next = ListNode(5)
 list3.next.next.next = ListNode(7)
 list3.next.next.next.next = ListNode(7)
 
-s = BadSolution()
-print(s.swapPairs(list1))
-print(s.swapPairs(list2))
-print(s.swapPairs(list3))
+# s = BadSolution()
+# print(s.swapPairs(list1))
+# print(s.swapPairs(list2))
+# print(s.swapPairs(list3))
 
 
 class Solution(object):
@@ -64,8 +64,22 @@ class Solution(object):
         :type head: ListNodes
         :rtype: ListNode
         """
-        previous = ListNode(-1)
-        temp = previous
-        previous.next = head
+        dummy = ListNode(-1)
+        prev, prev.next = dummy, head
+        while prev.next and prev.next.next:
+            current = prev.next
+            next_from_current = current.next
+            prev.next, next_from_current.next, current.next = next_from_current, current, next_from_current.next
+            prev = current
+        return dummy.next
 
 
+
+list3 = ListNode(1)
+list3.next = ListNode(2)
+list3.next.next = ListNode(5)
+list3.next.next.next = ListNode(7)
+list3.next.next.next.next = ListNode(7)
+
+ss = Solution()
+print(ss.swapPairs(list3))
