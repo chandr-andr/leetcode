@@ -8,7 +8,7 @@ class ListNode(object):
         return f"{self.val} {self.next if self.next else ''}"
 
 
-class Solution(object):
+class BadSolution(object):
     def swapPairs(self, head):
         """
         :type head: ListNodes
@@ -52,7 +52,20 @@ list3.next.next = ListNode(5)
 list3.next.next.next = ListNode(7)
 list3.next.next.next.next = ListNode(7)
 
-s = Solution()
+s = BadSolution()
 print(s.swapPairs(list1))
 print(s.swapPairs(list2))
 print(s.swapPairs(list3))
+
+
+class Solution(object):
+    def swapPairs(self, head):
+        """
+        :type head: ListNodes
+        :rtype: ListNode
+        """
+        previous = ListNode(-1)
+        temp = previous
+        previous.next = head
+
+
