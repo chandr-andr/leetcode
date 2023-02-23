@@ -22,3 +22,4 @@ class Solution(object):
 s = Solution()
 print(s.searchInsert([1, 3, 4, 7], 5))
 print(s.searchInsert([1, 3, 5, 7, 9, 15, 20, 21], 8))
+print(s.searchInsert([1, 3, 5, 7, 9, 15, 20, 21, 23], 100))
