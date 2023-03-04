@@ -21,8 +21,8 @@ class Solution(object):
 
         dfs(candidates, target)
         return result
-    
+
 
 s = Solution()
-print(s.combinationSum([2,3,6,7], 7))
-print(s.combinationSum([2,3,5], 8))
+print(s.combinationSum([2, 3, 6, 7], 7))
+print(s.combinationSum([2, 3, 5], 8))
