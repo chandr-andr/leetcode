@@ -17,4 +17,3 @@ class Solution(object):
             if target - num in hashmap:
                 return [hashmap[target - num], idx]
             hashmap[num] = idx
-
